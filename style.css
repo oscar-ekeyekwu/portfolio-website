@@ -103,12 +103,8 @@ body {
   top: 0;
   width: 100%;
   height: 100px;
-  background:rgba(59, 59, 121, 1);
+  background: rgba(59, 59, 121, 1);
   z-index: 2;
-}
-
-.sticky + .content {
-  padding-top: 120px;
 }
 
 /* content section */
@@ -360,6 +356,7 @@ body {
   background: rgba(196, 196, 196, 0.1);
   padding: 25px;
   color: #888888 !important;
+  margin-top: 120px;
 }
 
 /* .footer-content{
@@ -402,7 +399,7 @@ body {
 }
 /*--- responsiveness - media queries ---*/
 /* mobile devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .links-cont {
     margin-right: 2rem;
   }
