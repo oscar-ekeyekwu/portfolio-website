@@ -47,10 +47,11 @@ body {
 
 .header {
   width: 100%;
-  height: 60px;
+  height: 90px;
   top: 0;
   margin-bottom: 10px;
   position: relative;
+  transition: all 0.35s ease;
 }
 
 .nav-row {
@@ -100,19 +101,19 @@ body {
 
 .sticky {
   position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100px;
   background: rgba(59, 59, 121, 1);
   z-index: 2;
+  transition: all 0.35s ease;
+}
+
+.sticky + .content {
+  padding-top: 225px;
 }
 
 /* content section */
 .content {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin: auto;
-  width: 80%;
+  margin: 50px 100px;
+  width: 90%;
   max-width: 800px;
   padding: 10% 0;
   color: #e1e099;
@@ -311,7 +312,7 @@ body {
 
 /* portfolio section */
 .portfolio {
-  margin: auto;
+  margin: 20% auto;
 }
 .portfolio-details {
   display: grid;
@@ -402,6 +403,7 @@ body {
 @media only screen and (max-width: 650px) {
   .links-cont {
     margin-right: 2rem;
+    transition: all 0.35s ease;
   }
   .links-cont li:not(:last-child) {
     display: none;
@@ -443,6 +445,7 @@ body {
     width: 100%;
     text-align: left;
     background: rgba(59, 59, 121, 1);
+    transition: all 0.35s ease;
   }
   .links-cont.responsive #dropdown-btn {
     position: absolute;
@@ -457,7 +460,10 @@ body {
 
   /* content section */
   .content {
-    grid-template-columns: auto;
+    margin: 0 auto;
+  }
+  .sticky + .content {
+    padding-top: 140px;
   }
   .img-container {
     grid-area: 1;
@@ -471,7 +477,7 @@ body {
   .about-container {
     padding: 18px;
   }
-  .about-container .about-detail h3::after {
+  .about-container .about-detail .title::after {
     width: 70%;
   }
 
@@ -518,5 +524,80 @@ body {
     color: #888888 !important;
     width: 20px;
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-container > .about-detail:last-child > .desc {
+    text-align: left;
+  }
+  .about-container > .about-detail:first-child > .desc {
+    background: none;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  .exp-wrap {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .exp-wrap::before {
+    display: none;
+  }
+
+  .exp-block {
+    position: relative;
+    padding-top: 0;
+  }
+  .exp-ico {
+    display: none;
+  }
+
+  .exp-header {
+    float: none;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 2%;
+  }
+  .exp-header h3 {
+    margin-bottom: 0;
+    font-weight: 585;
+    font-size: 1.1rem;
+  }
+  .exp-header p {
+    color: #888888;
+    display: inline;
+  }
+  .exp-content {
+    margin: 0 0 10% 0;
+    padding: 20px;
+    background: rgba(196, 196, 196, 0.1);
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #888888;
+  }
+  .exp-content h4 {
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 550;
+    font-size: 0.9rem;
+  }
+  .exp-content h4::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .exp-content ul {
+    margin-top: 12px;
+  }
+  .exp-content li {
+    color: #888888;
+    margin-bottom: 7%;
   }
 }

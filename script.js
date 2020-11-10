@@ -9,8 +9,8 @@ var sticky = header.offsetTop;
 
 dropdownBtn.addEventListener("click", function (e) {
   if (menu.className === "links-cont" && logo.className === "logo-cont") {
-    menu.className += " responsive";
-    logo.className += " responsive";
+    menu.classList.add("responsive");
+    logo.classList.add("responsive");
     icon.classList.remove("fa-bars");
     icon.classList.add("fa-times");
   } else {
