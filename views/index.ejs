@@ -1,63 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ekeyekwu Oscar - Porfolio</title>
-
-    <!-- fonts -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Kreon"
-    />
-    <!-- css  -->
-    <link rel="icon" sizes="20x20" href="/images/FavIcon.png" />
-    <script
-      src="https://kit.fontawesome.com/1bc4781248.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="shapes">
-      <div class="shape1">
-        <img src="/shapes/shape1.png" alt="shape1" />
-      </div>
-      <div class="shape2">
-        <img src="/shapes/shape2.png" alt="shape2" />
-      </div>
-      <div class="shape3">
-        <img src="/shapes/shape3.png" alt="shape3" />
-      </div>
-      <div class="shape4">
-        <img src="/shapes/shape4.png" alt="shape4" />
-      </div>
-    </div>
+<% if (messages.success) { %>
+    <div class="flash flash-success"><%= messages.success %></div>
+    <% } %>
+    
+    <% if (messages.error) { %>
+        <div class="flash flash-error"><%= messages.error %></div>
+        <% } %>
+        
+    
+    
+    <%- include('partials/shapes') %>
     <div class="main">
-      <nav id="header" class="header">
-        <div class="nav-row">
-          <div id="logo" class="logo-cont">
-            <div class="logo">
-              <img src="/images/FavIcon.png" alt="logo" />
-            </div>
-          </div>
-          <div id="menu" class="links-cont">
-            <ul class="nav-links">
-              <li class="link"><a href="/">Home</a></li>
-              <li class="link"><a href="#about">About</a></li>
-              <li class="link"><a href="#projects">Projects</a></li>
-              <li class="link"><a href="/blog.html">Blog</a></li>
-              <li>
-                <a id="dropdown-btn" href="javascript:void(0);">
-                  <i id="icon" class="fas fa-bars"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <%- include('partials/navbar') %>
+      
 
       <!-- intro section -->
       <section class="content">
@@ -77,6 +31,10 @@
             <a
               href="https://drive.google.com/file/d/1vao-2rwzfBfbNxpHSKsnWWkenNeIYRIY/view?usp=sharing"
               ><button><i class="fa fa-download"></i> Resume</button></a
+            >
+            <a
+              href="#contact"
+              ><button><i class="fa fa-envelope"></i> Send me a Message</button></a
             >
           </div>
 
@@ -292,24 +250,6 @@
         <div class="portfolio-container">
           <div class="portfolio-details">
             <div class="project-img-cont">
-              <img src="/images/projects/comments-api.png" alt="comments-api" />
-            </div>
-            <div class="project">
-              <h3 class="project-name">Comments Microservice</h3>
-              <h5 class="project-category">API | Node.js | Contributor</h5>
-              <p class="project-desc">
-                The Comment API gives the developer access to built-in
-                functionalities for when they want to implement comments and
-                replies within their own application. Basic functionalities are
-                available for creation, update, and deletion of comments and
-                replies while ensuring that only users authorized are allowed to
-                use such functionalities. Additionally, there are extra features
-                such as filtering, sorting, voting, and flagging available comments.
-              </p>
-            </div>
-          </div>
-          <div class="portfolio-details">
-            <div class="project-img-cont">
               <img src="/images/projects/porfolio.png" alt="porfolio" />
             </div>
             <div class="project">
@@ -329,69 +269,35 @@
         </div>
       </section>
 
-      <!-- footer section -->
-      <section class="footer" id="footer">
-        <div class="footer-content">
-          <div class="contact-address">
-            <ul>
-              <li>
-                <span class="fa fa-stack">
-                  <i class="far fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-map-marker-alt fa-stack-1x"></i>
-                </span>
-                <span class="data">Mushin, Lagos Nigeria</span>
-              </li>
-              <li>
-                <span class="fa fa-stack">
-                  <i class="far fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-envelope fa-stack-1x"></i>
-                </span>
-                <span class="data"
-                  ><a href="mailto:oscarekeyekwu@gmail.com"
-                    >oscarekeyekwu@gmail.com</a
-                  ></span
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="social-links">
-            <ul class="social-icons-list">
-              <li class="social-link">
-                <a href="https://github.com/oscar-ekeyekwu" target="_blank"
-                  ><span class="fa fa-stack">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x"></i> </span
-                ></a>
-              </li>
-              <li class="social-link">
-                <a href="https://linkedin.com/in/ekeyekwu-oscar-393896198"
-                  ><span class="fa fa-stack">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x"></i> </span
-                ></a>
-              </li>
-              <li class="social-link">
-                <a href="https://twitter.com/ekeyekwuoscar" target="_blank"
-                  ><span class="fa fa-stack">
-                    <i class="far fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i> </span
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="copyright">
-          <p>All Rights Reserved.</p>
-          <p>
-            Ekeyekwu, Oscar Ikechukwu
-            <i class="fa fa-copyright" aria-hidden="true"></i> 2020.
-          </p>
+      <!-- contact me section -->
+      <section class="contact-me" id="contact">
+        <h4 class="section-title">Contact Me</h4>
+        <div class="contact-container">
+            <form action="/contact" id="contact-form" method="POST">
+                <div class="form-group">
+                    <!-- <label for="name">Name</label> -->
+                    <input type="text" name="name" id="" class="form-input" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <!-- <label for="name">Email Address</label> -->
+                    <input type="email" name="email" id="" class="form-input" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <!-- <label for="name">Message</label> -->
+                    <textarea name="message" id="" cols="30" rows="10" class="form-input" placeholder="Type in your message"></textarea>
+                </div>
+
+                <div class="form-group buttons">
+                   <button type="submit">Send</button>
+                </div>
+            </form>
         </div>
       </section>
+
+      <!-- footer section -->
+    <%- include('partials/footer') %>
+      
     </div>
 
-    <!-- scripts -->
-    <script src="https://use.fontawesome.com/67c94aa28f.js"></script>
-    <script src="script.js"></script>
-  </body>
-</html>
+
+  

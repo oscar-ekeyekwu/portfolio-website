@@ -9,6 +9,26 @@ body {
   font-family: kreon;
   overflow-x: hidden;
 }
+
+.flash {
+  padding: 15px 20px;
+  border: 1px solid;
+  border-radius: 3px;
+  width: 60%;
+  margin: 0 auto;
+}
+.flash-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  
+}
+
+.flash-error{
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #e02222;
+}
 /* shapes */
 .shapes > * {
   margin: 0;
@@ -133,7 +153,7 @@ body {
 .intro {
   padding: 15px 0;
 }
-.intro button {
+.intro button, .form-group button {
   background: #521477;
   border: 0;
   padding: 10px 15px;
@@ -312,7 +332,7 @@ body {
 
 /* portfolio section */
 .portfolio {
-  margin: 20% auto;
+  margin: 15% auto;
 }
 .portfolio-details {
   display: grid;
@@ -347,6 +367,47 @@ body {
 .project .project-desc {
   color: #888888;
   text-align: justify;
+}
+
+/* contact me section */
+.contact-me{
+  margin: 15% auto;
+
+}
+
+.contact-container{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.form-group {
+  margin: 20px 0;
+    
+  color: #c327ab;
+}
+
+.form-group label{
+  display: block;
+  width: 60%;
+}
+
+.form-group .form-input{
+  border-color: #e1e099;
+  background: transparent;
+}
+
+.form-group  input[type=text], .form-group input[type=email], .form-group textarea{
+  width: 60%;
+  padding: 15px 22px;
+  box-sizing: border-box;  
+  color: #e1e099;
+}
+
+.form-group > button{
+  width: 30%;
+  margin: 0 aut0;
 }
 
 /* footer section */
