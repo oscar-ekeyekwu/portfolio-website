@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
 router.post('/contact', function(req, res, next){
 
   const {name, email, message} = req.body;
-  
+
   var mail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -26,7 +26,7 @@ router.post('/contact', function(req, res, next){
   var mailOptions = {
     from: process.env.SMTP_SENDER,
     to: email,
-    subject: 'Portfolio Response',
+    subject: 'Ekeyekwu Oscar Portfolio Response',
     text: 'Thank you for reaching out. I will be in touch shortly'
   };
 
