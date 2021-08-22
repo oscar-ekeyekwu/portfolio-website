@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,9 @@
     "express-session": "^1.17.2",
     "express-static": "^1.2.6",
     "express-validator": "^6.12.1",
+    "googleapis": "^84.0.0",
     "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
     "path": "^0.12.7"
   }
 }

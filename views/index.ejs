@@ -1,17 +1,20 @@
-<% if (messages.success) { %>
-    <div class="flash flash-success"><%= messages.success %></div>
+     
+    
+    <% if (messages.success) { %>
+      <div class="flash flash-success">
+        <%= messages.success %>
+      </div>
     <% } %>
-    
     <% if (messages.error) { %>
-        <div class="flash flash-error"><%= messages.error %></div>
-        <% } %>
-        
-    
-    
+      <div class="flash flash-error">
+        <%= messages.error %>
+      </div>
+    <% } %>
     <%- include('partials/shapes') %>
     <div class="main">
     <%- include('partials/navbar') %>
       
+    
 
       <!-- intro section -->
       <section class="content">
@@ -259,14 +262,9 @@
             <h3 class="title">Tools & Technologies</h3>
             <div class="desc">
               <ul>
-                <li><span>Programming Languages:</span> PHP, JavaScript</li>
-                <li><span>Database:</span> MySql, MongoDB</li>
-                <li>
-                  <span>Tools:</span> Github, Adobe XD, Visual Studio Code,
-                  Oracle VirtualBox, Microsoft Visual Studio, Trello, Swagger,
-                  Figma ...
-                </li>
-                <li><span> Technologies:</span> Git, Docker, Vagrant</li>
+                <li><span>Programming Languages:</span> C#, PHP, JavaScript </li>
+                <li><span>Database:</span>MSSQL, MySql, MongoDB</li>                
+                <li><span> Technologies:</span> Git, Docker, Vagrant, Azure</li>
               </ul>
             </div>
           </div>
